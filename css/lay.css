@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;1,200;1,300&display=swap');
+
+:root{
+    --pink:#7d2525;
+}
+
+*{
+    font-family:'Nunito', sans-serif;
+    margin: 0; padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: var(--pink);
+    color:rgb(206, 110, 107);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+.heading span{
+    font-size: 3.5rem;
+    background: rgb(206, 110, 107, .2);
+    color:var(--pink);
+    border-radius: .5rem;
+    padding:.2rem 1rem;
+}
+.heading span.space{
+    background: none;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--pink);
+    color: #f0e9e9;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--pink);
+    cursor: pointer;
+    font-size: 1.7rem;
+
+}
+
+.btn:hover{
+    background: rgb(206, 110, 107, .2);
+    color: var(--pink);
+
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background:#650f26;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  2rem 9%;
+}
+
+header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: rgb(223, 227, 230);
+    text-transform: uppercase;
+}
+
+header .logo span{
+    color:var(--pink);
+}
+
+header .navbar a{
+    color:#cacbd0;
+    font-size: 2rem;
+    margin:0  .8rem;
+}
+
+header .navbar a:hover{
+        color:var(--pink);
+}
+
+header .icons i{
+    font-size:  2.5rem;
+    color: #f0e9e9;
+    cursor: pointer;
+    margin-right: 2rem;
+
+}
+
+header .icons i:hover{
+    color: var(--pink);
+}
+
+header .search-bar-container{
+    position: absolute;
+    top:100%; left: 0; right:0;
+    padding: 1.5rem 2rem;
+    background: #7d2525;
+    border-top: .1rem solid rgb(206, 110, 107, .2);
+    display: flex;
+    align-items: center ;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar{
+    width:100%;
+    padding: 1rem;
+    text-transform: none;
+    color: black;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+
+header .search-bar-container label{
+    color:#f0e9e9;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover{
+    color: palevioletred;
+}
+
+body{
+    height: 200rem;
+}
+
+#menu-bar{
+    color:#f0e9e9;
+    border: .1rem solid #f0e9e9;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+
+.home .content{
+    text-align: center;
+}
+
+.home .content h3{
+    font-size: 4.3rem;
+    color: #f0e9e9;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgb(0,0,0,.1);
+}
+
+.home .content p{
+    font-size: 2.5rem;
+    color: #f0e9e9;
+    padding: .5rem 0;
+}
+
+.home .img-container img{
+    position: absolute;
+    top:0; left:0;
+    z-index: -1;
+    height: 100%;
+    width:100%;
+    object-fit:cover
+
+}
+
+.home .controls{ 
+    padding:1rem;
+    border-radius: 5rem;
+    background: rgb(0,0,0,.1);
+    position: relative;
+    top:10rem;
+}
+
+.home .controls .img-btn{
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #f0e9e9;
+    cursor: pointer;
+    margin:0.5rem;
+}
+
+.home .controls .img-btn.active{
+    background: var(--pink);
+
+}
+
+.book .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;  
+    align-items: center;  
+}
+
+.book .row .image img{
+   width: 100%;
+}
+
+.book .row .image{
+    flex:1 1 40rem;
+}
+
+.book .row form .inputBox{
+    padding: .5rem 0;
+}
+
+.book .row form .inputBox input{
+    width:100%;
+    padding: 1rem;
+    border: .1rem solid rgb(206, 110, 107, .2);
+    font-size: 1.7rem;
+    color: #c64a4a;
+    text-decoration: none ;
+}
+
+.book .row form .inputBox h3{
+    font-size: 2rem;
+    padding: 1rem;
+    color: #7d2525;
+
+}
+
+/* media queries >:c */
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:991px){
+    header{
+        padding: 2rem;
+    }
+}
+
+@media(max-width:768px){
+   #menu-bar{
+    display:initial;
+   }
+
+   header .navbar{
+    position: absolute;
+    top: 100%; right: 0; left:0;
+    background: #d6708b;
+    border-top:  .1rem solid rgb(206, 110, 107, .2);
+    padding: 1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+   header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   header .navbar a{
+    display: block;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #c64a4a;
+   }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .heading span{
+        font-size: 1.5rem;
+    }
+}
+
+.packages .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.packages .box-container .box{
+   flex: 1 1 30rem;
+   border-radius: .5rem;
+   overflow: hidden; 
+   box-shadow: 0 1rem 2rem rgb(206, 110, 107, .2);
+}
+
+.packages .box-container .box img{
+    height:25rem;
+    width:100%;
+    object-fit:cover;
+}
+
+.packages .box-container .box .content{
+    padding: 2rem;
+}
+
+.packages .box-container .box .content h3{
+    font-size: 2rem;
+    color:#7d2525;
+}
+
+.packages .box-container .box .content h3{
+    font-size: 2rem;
+    color:#7d2525;
+}
+
+.packages .box-container .box .content h3 i{
+    color:var(--pink);
+}
+
+.packages .box-container .box .content p{
+    font-size: 1.7rem;
+    color:#6d1f1f;
+    padding: 1rem 0;
+}
+
+.packages .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color:#6d1f1f;
+    padding: 1rem 0;
+}
+
+.services .box-container{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem; 
+}
+
+.services .box-container .box{
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.services .box-container .box i{
+    padding:1rem;
+    font-size: 5rem;
+    color: var(--pink);
+}
+
+.services .box-container .box h3{
+    font-size: 2.5rem;
+    color:#6d1f1f;
+}
+.services .box-container .box p{
+    font-size: 1.5rem;
+    color:#333;
+    padding: 1rem 0;
+}
+
+.services .box-container .box:hover{
+    box-shadow: 0 1rem 2rem rgb(206, 110, 107, .2);
+}
+
+.footer{
+    background:#7d2525
+}
+
+.footer .box-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    padding: 1rem 0;
+    flex:1 1 .25rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color:#f0e9e9;
+}
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    padding: 7rem 0;
+    color:#d6708b;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color:#d6708b;
+}
+
+.footer .box-container .box a:hover{
+    color:pink;
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color:aliceblue;
+    border-top: .1rem solid rgb(206, 110, 107, .2);
+}
+
+.footer .credit span{
+    color: pink;
+}
+
+.review .box{
+    padding:2rem;
+    text-align: centre;
+    box-shadow: 0 1rem 2rem rgb(191, 63, 59);
+    border-radius: 5rem;
+}
+
+.review .review-slider{
+    padding-bottom: 2rem;
+}
+
+.review .box img{
+    height: 13rem;
+    width:13rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    position: centre;
+}
+
+.review .box h3{
+    color: antiquewhite;
+    font-size: 2.5rem;
+}
+
+.review .box p{
+    color: #d6708b;
+    font-size: 1.5rem;
+}
+
+.review .box .stars i{
+    font-size: 1.7rem;
+    color:#6d1f1f;
+    padding: 1rem 0;
+}
+
+/* Style all table text to be white */
+table.table {
+    color: white;
+}
+
+/* Style <th> elements with very light pink background and bold text */
+table.table th {
+    background-color: #ffe0e0; /* Adjust this color as needed */
+    font-weight: bold;
+}
+
+/* Style table borders to be white */
+table.table, table.table th, table.table td {
+    border-color: white;
+}
